@@ -1,0 +1,28 @@
+server:
+  port: 9800
+
+spring:
+  application:
+    name: threads-be
+  datasource:
+    url: jdbc:postgresql://localhost:5432/threads
+    username: root
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  graphql:
+    graphiql:
+      enabled: true
+logging:
+  level:
+    org:
+      springframework:
+        graphql: DEBUG
+
+jwt:
+  access-token-key: "ntVl0EJWwR5k3u4IA9xZJu/9hj+63BRAqiSjXgs6iETADdxDIBLvAgsTYCrsb96Q"
+  access-token-expiration: 1h
+  refresh-token-key: "ntVl0EJWwR5k3u4IA9xZJu/9hj+63BRAqiSjXgs6iETADdxDIBLvAgsTYCrsb96Q"
+  refresh-token-expiration: 1d
